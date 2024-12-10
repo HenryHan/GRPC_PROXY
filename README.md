@@ -15,7 +15,8 @@ GRPC_PROXY 是一个类似 Fiddler 的工具，专门用于 gRPC 协议的抓包
 
 - Windows、Mac、Linux 桌面操作系统
 - Python 3.8 或更高版本
-- pip 包管理器
+- protobuf库：pip install protobuf
+- grpcio库：pip install grpcio
 
 ## 使用方法
     1. python server.py启动grpc服务器
