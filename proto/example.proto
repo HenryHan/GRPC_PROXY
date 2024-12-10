@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package example;
+
+// 定义服务
+service ExampleService {
+    // 普通方法
+    rpc UnaryMethod(ExampleRequest) returns (ExampleResponse);
+    
+    // 双向流方法
+    rpc BiDiStream(stream ExampleRequest) returns (stream ExampleResponse);
+}
+
+// 请求消息
+message ExampleRequest {
+    string message = 1;
+    int32 id = 2;
+}
+
+// 响应消息
+message ExampleResponse {
+    string message = 1;
+    User user = 2;
+}
+
+message User {
+    string name = 1;
+    int32 age = 2;
+}
